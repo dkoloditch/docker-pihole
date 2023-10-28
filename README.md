@@ -25,5 +25,7 @@ Change the password
 pihole -a -p
 ```
 
-Admin interface is available at 127.0.0.1/admin or
-<your machine's IP address>/admin.
+Admin interface is available at either of the following addresses
+- [pi.hole/admin](pi.hole/admin)
+- [127.0.0.1/admin](127.0.0.1/admin)
+- <your machine's IP address>/admin
