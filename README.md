@@ -29,3 +29,17 @@ Admin interface is available at either of the following addresses
 - [pi.hole/admin](pi.hole/admin)
 - [127.0.0.1/admin](127.0.0.1/admin)
 - <your machine's IP address>/admin
+
+### Verification
+
+Check if you can establish a connection to the DNS server
+
+```
+nc -zv <your machine's IP address> 53
+```
+
+Check if you can perform a DNS query
+
+```
+host <your machine's IP address>
+```
