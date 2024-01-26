@@ -43,3 +43,15 @@ Check if you can perform a DNS query
 ```
 host <your machine's IP address>
 ```
+
+or
+
+```
+dig <your machine's IP address>
+```
+
+or
+
+```
+dig google.com @<your machine's IP address> -p 53
+``
