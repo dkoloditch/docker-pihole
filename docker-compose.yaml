@@ -18,8 +18,27 @@ services:
       # WEBPASSWORD: 'set a secure password here or it will be random'
     # Volumes store your data between container upgrades
     volumes:
-      - './etc-pihole:/etc/pihole'
-      - './etc-dnsmasq.d:/etc/dnsmasq.d'
+      - custom_pihole_volume:/etc/pihole # path inside the container
+      - custom_dnsmasq_volume:/etc/dnsmasq.d # path inside the container
     #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
     # cap_add:
     #   - NET_ADMIN # Required if you are using Pi-hole as your DHCP server, else not needed
+
+volumes:
+  # These custom volumes solve an issue related to sed's usage in resetting
+  # the pihole password. See solution here:
+  # https://discourse.pi-hole.net/t/sed-couldnt-open-temporary-file-etc-pihole-sed/65159/4
+  custom_pihole_volume:
+    name: pihole_volume
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./etc-pihole # path locally
+  custom_dnsmasq_volume:
+    name: dnsmasq_volume
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./etc-dnsmasq.d # path locally
