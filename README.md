@@ -54,4 +54,18 @@ or
 
 ```
 dig google.com @<your machine's IP address> -p 53
-``
+```
+
+## Troubleshooting
+
+### Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:53 -> 0.0.0.0:0: listen tcp 0.0.0.0:53: bind: address already in use
+
+This is an issue related to Mac OS's `mDnsResponder`, which was introduced in
+recent versions of the OS. Use the following workaround:
+
+1. Edit ~/Library/Group\ Containers/group.com.docker/settings.json and set
+  `"kernelForUDP": false`
+2. Restart Docker Desktop
+
+See [this github issue](https://github.com/docker/for-mac/issues/7008#issuecomment-17468457430)
+for more details.
