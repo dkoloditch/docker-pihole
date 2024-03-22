@@ -69,3 +69,15 @@ recent versions of the OS. Use the following workaround:
 
 See [this github issue](https://github.com/docker/for-mac/issues/7008#issuecomment-17468457430)
 for more details.
+
+## Adlists
+
+https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+
+https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt
+
+https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts
+
+https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
+
+https://raw.githubusercontent.com/d3ward/toolz/master/src/d3host.txt
