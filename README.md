@@ -56,6 +56,10 @@ or
 dig google.com @<your machine's IP address> -p 53
 ```
 
+## Testing
+
+[https://d3ward.github.io/toolz/adblock](https://d3ward.github.io/toolz/adblock)
+
 ## Troubleshooting
 
 ### Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:53 -> 0.0.0.0:0: listen tcp 0.0.0.0:53: bind: address already in use
